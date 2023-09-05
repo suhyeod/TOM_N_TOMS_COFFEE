@@ -33,12 +33,12 @@ function openhelpitem(e, h) {
 
 $(document).ready(function(){
 	var height =  $(".notice").height(); 
-	var num = $(".rolling li").length; 
+	var num = $(".rolling_1 > li").length; 
 	var max = height * num; 
 	var move = 0; 
 	function noticeRolling(){
 		move += height; 
-		$(".rolling").animate({"top":-move},600,function(){ 
+		$(".rolling_1").animate({"top":-move},600,function(){ 
 			if( move >= 6 ){ 
 				$(this).css("top",0); 
 				move = 0; 
@@ -46,7 +46,32 @@ $(document).ready(function(){
 		});
 	};
 	noticeRollingOff = setInterval(noticeRolling,3000);
-	$(".rolling").append($(".rolling li").first().clone()); 
+	$(".rolling_1").append($(".rolling_1 > li").first().clone()); 
+
+	$(".rolling_stop").click(function(){
+		clearInterval(noticeRollingOff); 
+	});
+	$(".rolling_start").click(function(){
+		noticeRollingOff = setInterval(noticeRolling,1000); 
+	});
+});
+
+$(document).ready(function(){
+	var height =  $(".notice").height(); 
+	var num = $(".rolling_2 > li").length; 
+	var max = height * num; 
+	var move = 0; 
+	function noticeRolling(){
+		move += height; 
+		$(".rolling_2").animate({"top":-move},600,function(){ 
+			if( move >= 6 ){ 
+				$(this).css("top",0); 
+				move = 0; 
+			};
+		});
+	};
+	noticeRollingOff = setInterval(noticeRolling,3000);
+	$(".rolling_2").append($(".rolling_2 > li").first().clone()); 
 
 	$(".rolling_stop").click(function(){
 		clearInterval(noticeRollingOff); 
@@ -57,9 +82,6 @@ $(document).ready(function(){
 });
 
 
-$(function(){
-	
-})
 
 //무한 슬라이드
 
