@@ -177,11 +177,12 @@ main {
 .hidden_ul{
     background-color: white;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
-    position: fixed;
+
     top: 100px;
     padding: 50px 35px;
     font-size: 16px;
     color: black;
+    display: none;
 }
 #menu , #store , #service {
     font-weight: bold;
@@ -217,12 +218,6 @@ main {
     margin-bottom: 90px;
 }
 
-.silder_1 {
-    transition: 1s;
-    overflow: hidden;
-    position: absolute;
-    height: 430px;
-}
 
 #bbb {
     color: black;
@@ -233,15 +228,19 @@ main {
     height: 50px;
     overflow: hidden;
 }
-.rolling {
+.rolling_1 , .rolling_2 {
     position: relative;
     width: 100%;
     height: auto;
 }
-.rolling > li {
+.rolling_1 > li , .rolling_2 > li {
     width: 100%;
     height: 50px;
     line-height: 64px;
+    display: flex;
+}
+.rolling_1 > li > div , .rolling_2 > li > div {
+    margin: 3px 30px;
 }
 
 #frist_bo {
@@ -345,19 +344,18 @@ main {
 #th {
     margin: 0 30px;
 }
-
+#sns {
+    text-align: center;
+}
 #sns > ul {
-    display: flex;
-    margin: 0 28px;
+    display: inline-flex;
 }
 
 #sns > ul > li > img {
     width: 280px;
     height: 280px;
 }
-#sns > ul:nth-child(2) {
-    margin-top: -4px;
-}
+
 
 .op {
     opacity: 0;
