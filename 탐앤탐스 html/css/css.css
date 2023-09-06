@@ -150,10 +150,23 @@ header > div > ul:nth-child(1) {
 header > div > ul:nth-child(1) > li {
     height: 12px;
 }
-header > div > ul:nth-child(1) > li:not(.not_border) {
+
+.onc:nth-child(1) > li:not(.not_border) {
     border-left: 1px solid gray;
     padding-left: 20px;
+
+}  
+.onc:nth-child(1) > li {
+    font-size: 16px;
+    color: gray;
+    line-height: 10px;
 }
+
+/* header > div > ul:nth-child(1) > li:not(.not_border) {
+    border-left: 1px solid gray;
+    padding-left: 20px;
+    line-height: 10px;
+} */
 header > div > ul > li {
     margin: 0 10px;
 }
@@ -169,49 +182,85 @@ main {
 }
 .onc {
     cursor: pointer;
+    position: relative;
 }
-.onc > li > a {
+.onc:nth-child(2) {
+    margin-top: 50px;
+}
+.onc > li > a , .onc > li {
     color: black;
+    font-size: 22px;
 }
 
 .hidden_ul{
     background-color: white;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
-
-    top: 100px;
     padding: 50px 35px;
     font-size: 16px;
     color: black;
     display: none;
+    position: absolute;
+    margin-top: 10px;
 }
 #menu , #store , #service {
     font-weight: bold;
     line-height: 30px;
 }
-
+#menu {
+    width: 50px;
+}
+.ccc > li > a:not(.f_bold) {
+    color: gray;
+}
+.ccc:not(.ma_not) {
+    margin-right: 50px;
+}
+#store {
+    width: 140px;
+    height: 60px;
+}
+#service {
+    width: 160px;
+    height: 180px;
+    gap: 30px;
+}
 #commnuity {
-    display: flex;
-    line-height: 30px;
     color: black;
-    width: 3000px;
+    line-height: 30px;
 }
-#commnuity > ul:not(.ma_not) {
-    margin-right: 100px;
+#commnuity  {
+    display: none;
+    width: 700px;
+    margin-left: -400px;
 }
-#commnuity > ul > li {
+
+#commnuity > li > ul {
+    display: flex;
+}
+
+#commnuity > li > ul > li > ul {
+    color: gray;
+}
+.f_bold {
+    color: black;
     font-weight: bold;
 }
+
 #commnuity > ul > ul > li { 
     color: grey;
     font-size: 14px;
 }
 #tomntoms {
-    display: flex;
     font-weight: bold;
     line-height: 30px;
     width: 300px;
+    margin-left: -172px
 }
-#tomntoms > ul:nth-child(1) > li:not(.not_bold) {
+
+#tomntoms > li {
+    display: flex;
+}
+#tomntoms > li > ul:nth-child(1) > li:not(.not_bold) {
     color: gray;
 }
 .ma_bo {
@@ -416,7 +465,7 @@ main {
     font-size: 16px;
     color: gray;
     display: flex;
-    line-height: 50px;
+    line-height: 32px;
 }
 
 #last_3 > li:nth-child(1) {
