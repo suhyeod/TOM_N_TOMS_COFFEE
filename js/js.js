@@ -92,3 +92,22 @@ $(function(){
 		$(this).siblings().stop().slideToggle();
 	});
 });
+
+
+
+
+// onc_hidden 
+
+
+let openhelpitems = (e) =>{
+	console.log(e.nextElementSibling);
+	console.log(e.nextElementSibling.style.height);
+	console.log(e.nextElementSibling.scrollHeight);
+
+    if(e.nextElementSibling.style.height==''||e.nextElementSibling.style.height=='0px'){
+      e.nextElementSibling.style.height=e.nextElementSibling.scrollHeight+'px';
+    }else{
+      e.nextElementSibling.style.height='0px';
+    }
+    
+  }
