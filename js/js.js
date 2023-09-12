@@ -111,3 +111,13 @@ let openhelpitems = (e) =>{
     }
     
   }
+
+
+let openwidth = (e) =>{
+    if(e.nextElementSibling.style.width==''||e.nextElementSibling.style.width=='0px'){
+      e.nextElementSibling.style.width=e.nextElementSibling.scrollWidth+'px';
+    }else{
+      e.nextElementSibling.style.width='0px';
+    }
+    
+}
