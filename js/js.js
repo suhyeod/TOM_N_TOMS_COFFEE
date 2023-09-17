@@ -112,12 +112,28 @@ let openhelpitems = (e) =>{
     
   }
 
-
-let openwidth = (e) =>{
-    if(e.nextElementSibling.style.width==''||e.nextElementSibling.style.width=='0px'){
-      e.nextElementSibling.style.width=e.nextElementSibling.scrollWidth+'px';
-    }else{
-      e.nextElementSibling.style.width='0px';
-    }
-    
-}
+  const mobile_hidden = document.querySelectorAll('.line') // 모바일 히든
+  const mobile_hidden_close = document.querySelectorAll('.x')
+  const mobile_hidden_sc = document.querySelectorAll('#onc_hidden')
+  mobile_hidden.forEach((Element, index) => {
+	  Element.addEventListener("click", () => {
+		  var mhw = mobile_hidden_sc[index].style.width;
+		  console.log(mhw);
+		  if (mhw == '100%') {
+			  mobile_hidden_sc[index].style.width = "0%";
+		  } else {
+			  mobile_hidden_sc[index].style.width = "100%";
+		  }
+	  });
+  });
+  mobile_hidden_close.forEach((Element, index) => {
+	  Element.addEventListener("click", () => {
+		  var mhw = mobile_hidden_sc[index].style.width;
+		  console.log(mhw);
+		  if (mhw == '100%') {
+			  mobile_hidden_sc[index].style.width = "0%";
+		  } else {
+			  mobile_hidden_sc[index].style.width = "100%";
+		  }
+	  });
+  });
