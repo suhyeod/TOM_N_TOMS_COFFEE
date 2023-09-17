@@ -200,7 +200,19 @@ table {
     overflow: hidden;
 }
 
-
+.x {
+    position: relative;
+    display: inline-block;
+    padding: 0px 20px;
+    top: 10px;
+    left: 300px;
+    cursor: pointer;
+}
+.x:after {
+    display: inline-block;
+    content: "\00d7";
+    font-size: 50px;
+}
 .help-lastitem {
     overflow: hidden;
     transition: 0.5s;
@@ -208,12 +220,16 @@ table {
     font-weight: bold;
 
 }
-
-#onc_hidden > div {
+#onc_hidden {
+    transition: 0.5s;
+}
+#onc_hidden > div:not(.x) {
     width: 300px;
     background-color: white;
     height: 100%;
     padding-top: 30px;
+    top: -55px;
+    position: relative;
     
 }
 
@@ -599,6 +615,7 @@ table {
     height: 30px;
     justify-content: space-between;
     margin-top: 15px;
+    cursor: pointer;
 }
 .line > div {
     width: 30px;
