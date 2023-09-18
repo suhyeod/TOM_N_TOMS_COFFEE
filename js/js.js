@@ -89,7 +89,8 @@ $(document).ready(function(){
 
 $(function(){
 	$(".onc > li > a").hover(function (){
-		$(this).siblings().stop().slideToggle();
+		console.log($(this).children())
+		$(this).children().stop().slideToggle();
 	});
 });
 
@@ -100,18 +101,20 @@ $(function(){
 
 
 let openhelpitems = (e) =>{
-	console.log(e.nextElementSibling);
+	console.log(e);
 	console.log(e.nextElementSibling.style.height);
 	console.log(e.nextElementSibling.scrollHeight);
 
     if(e.nextElementSibling.style.height==''||e.nextElementSibling.style.height=='0px'){
       e.nextElementSibling.style.height=e.nextElementSibling.scrollHeight+'px';
-    }else{
+		e.style.backgroundColor  = "#572a31"
+		e.style.color = "white"
+	}else{
       e.nextElementSibling.style.height='0px';
+	  e.style.backgroundColor = "white"
+	  e.style.color = "black"
     }
-    
-  }
-
+}
   const mobile_hidden = document.querySelectorAll('.line') // 모바일 히든
   const mobile_hidden_close = document.querySelectorAll('.x')
   const mobile_hidden_sc = document.querySelectorAll('#onc_hidden')
