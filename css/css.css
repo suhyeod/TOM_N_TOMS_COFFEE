@@ -123,6 +123,31 @@ table {
     border-spacing: 0;
 }
 /*========================================reset code===========================================*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/Roboto/Roboto-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+body {
+    font-family: "Roboto" , sans-serif;
+}
 .pc_container > header {
     display: flex;
     justify-content: space-between;
