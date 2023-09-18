@@ -108,13 +108,16 @@ let openhelpitems = (e) =>{
     if(e.nextElementSibling.style.height==''||e.nextElementSibling.style.height=='0px'){
       e.nextElementSibling.style.height=e.nextElementSibling.scrollHeight+'px';
 		e.style.backgroundColor  = "#572a31"
-		e.style.color = "white"
+		e.querySelector('.nav_down').style.color = "white"
 	}else{
       e.nextElementSibling.style.height='0px';
 	  e.style.backgroundColor = "white"
-	  e.style.color = "black"
+	  e.querySelector('.nav_down').style.color = "black"
     }
 }
+
+
+
   const mobile_hidden = document.querySelectorAll('.line') // 모바일 히든
   const mobile_hidden_close = document.querySelectorAll('.x')
   const mobile_hidden_sc = document.querySelectorAll('#onc_hidden')
