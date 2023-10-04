@@ -723,6 +723,8 @@ body {
     margin-right: auto;
     color: white;
 }
+#mobile_bu_1 > div {
+    cursor: pointer;
 #mobile_bu_1 > div:last-child {
     display: flex;
     justify-content: center;
@@ -799,7 +801,9 @@ footer > ul:last-child > li {
 footer > ul:last-child > li:last-child {
     margin-top: 60px;
 }
-
+footer > ul > li > img {
+        cursor: pointer;
+}
 /*========================================mobile================================*/
 @media (min-width : 1200px) {
     .mobile_container {
